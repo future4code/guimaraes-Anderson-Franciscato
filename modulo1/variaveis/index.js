@@ -39,7 +39,7 @@ console.log ("Você está usando sapato? " + sapato)
 console.log ("Você está jogando video game? " + videogame)
 console.log ("Você tem carro? " + carro) */
 /* /_Exercicio 8_/ */
-let a = 15
+/* let a = 15
 let b = 30
 let c = a 
 c = a 
@@ -47,3 +47,10 @@ a = b
 b = c
 console.log ("O novo valor de a ẽ = " + a) //novo valor de a é 30
 console.log ("O novo valor de b ẽ = " + b) //novo valor de b é 15
+ */
+/* /_Desafio_/ */
+let a = prompt("Insira aqui o primeiro número")
+let b = prompt("Insira aqui o segundo número")
+let c = parseInt (a) + parseInt (b)
+console.log ( "O valor da soma dos números é = " + c)
+console.log ( "O valor da multiplicação dos números é = " + (a * b))
