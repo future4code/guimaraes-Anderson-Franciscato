@@ -66,9 +66,9 @@ console.log(verificaPeriodo(periodo));
 let gener = prompt("Qual o genero do filme?");
 let valor = prompt("Qual o valor do ingreso?");
 function verificaGenero(genero, valor) {
-    if (genero === "fantasia" && valor <= 15) {
+    if (genero === "fantasia" && valor < 15) {
         return "Bom filme!";
-    } else if (genero === "fantasia" && valor > 15) {
+    } else if (genero === "fantasia" && valor >= 15) {
         return "Ingresso caro";
     } else {
         return "Escolha outro filme :'(";
@@ -97,8 +97,8 @@ console.log(verificaGenero(gener, valor));
 // Desafio 2
 
 var nome = prompt("Qual o seu nome?");
-var tipoDeJogo = prompt("Qual o tipo de jogo? (IN, internacional. Ou DO, domestico)");
-var etapaDoJogo = prompt("Qual a etapa do jogo? (SF, semi-final. DT, decisão de terceiro lugar. Ou FI, final)");
+var tipoDeJogo = prompt("Qual o tipo de jogo? (IN, internacional. Ou DO, domestico)").toUpperCase();
+var etapaDoJogo = prompt("Qual a etapa do jogo? (SF, semi-final. DT, decisão de terceiro lugar. Ou FI, final)").toUpperCase();
 var categoria = Number(prompt("Qual a categoria do jogo? (1, 2, 3 ou 4)"));
 var quantidade = Number(prompt("Qual a quantidade de ingressos?"));
 
@@ -192,6 +192,7 @@ function valorIngo () {
 }
 
 console.log ("---Dados da compra---")
+console.log ("Nome do cliente: " + nome);
 console.log ("Tipo de jogo" + " " + tipoJogo(tipoDeJogo));
 console.log ("Etapa do jogo" + " " + etapaJogo(etapaDoJogo));
 console.log ("Categoria" + " " + categoria);
