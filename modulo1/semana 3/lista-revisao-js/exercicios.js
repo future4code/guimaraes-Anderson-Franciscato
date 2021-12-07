@@ -35,6 +35,13 @@ function retornaArrayOrdenado(array) {
 
 // EXERCÍCIO 04
 function retornaNumerosPares(array) {
+    var arrayPares = [];
+    for (var i = 0; i < array.length; i++) {
+        if (array[i] % 2 === 0) {
+            arrayPares.push(array[i]);
+        }
+    }
+    return arrayPares;
   
 }
 
