@@ -22,7 +22,14 @@ function retornaArrayInvertido(array) {
 
 // EXERCÍCIO 03
 function retornaArrayOrdenado(array) {
-    
+    var arraySorted =[];
+    for (var i = 0; i < array.length; i++) {
+        arraySorted.push(array[i]);
+    }
+    arraySorted.sort(function(a, b) {
+        return a - b;
+    });
+    return arraySorted;   
   
 }
 
