@@ -59,7 +59,13 @@ function retornaNumerosParesElevadosADois(array) {
 
 // EXERCÍCIO 06
 function retornaMaiorNumero(array) {
-  
+  var arrayMaior = [];
+    for (var i = 0; i < array.length; i++) {
+        if (array[i] > arrayMaior) {
+            arrayMaior = array[i];
+        }
+    }
+    return arrayMaior;
 }
 
 // EXERCÍCIO 07
