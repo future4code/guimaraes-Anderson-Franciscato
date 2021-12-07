@@ -1,0 +1,22 @@
+Passos para a resolução de problemas:
+
+1 - Ter atenção no enunciado 
+Ler o enunciado com atenção, se perguntar o que o código deve fazer e identifique informações únicas que faram a diferença para o código.
+
+2 - Retirar informações relevantes
+ Separar as palavras chaves que serão usados como nomes de variaveis, o que irá criar uma função e se existe alguma condição de existência para o código.
+
+3 - Pensar as entradas e saidas
+ Como serão os dados recebidos? Quais serão eles? Quais serão as possiveis respostas? Criar uma função com estas entradas e saidas.
+
+4 - Fazer um esquema visual 
+Criar exemplos de situações, montar uma lógica completa do código e pensar nos possiveis cenários de imputs e outputs
+
+5 - Criar um código feio 
+Colocar todas as ideias em um papel antes de passar elas para a IDE, depois disso testar cada uma das possibilidades até que o código realize tudo o exigido pelo enunciado.
+
+6 - Testar força bruta
+Procurar a solução óbvia, escrever o programa todo no nosso idioma e por fim transcrever para a linguagem de código desejada.
+
+7 - Refatorar 
+Dar bons nomes para as funções e para as variaveis, separar as funções de cada elemento e começar com as principais etapas.
