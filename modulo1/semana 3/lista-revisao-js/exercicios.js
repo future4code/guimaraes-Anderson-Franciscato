@@ -92,6 +92,11 @@ function retornaObjetoEntreDoisNumeros(num1, num2) {
 
 // EXERCÍCIO 08
 function retornaNPrimeirosPares(n) {
+    var retornaNPrimeirosPares = [];
+    for (var i = 0; i < n; i++) {
+        retornaNPrimeirosPares.push(i * 2);
+    }
+    return retornaNPrimeirosPares;
    
 }
 
