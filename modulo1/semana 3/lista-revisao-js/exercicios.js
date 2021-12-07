@@ -47,6 +47,13 @@ function retornaNumerosPares(array) {
 
 // EXERCÍCIO 05
 function retornaNumerosParesElevadosADois(array) {
+    var arrayElevados = [];
+    for (var i = 0; i < array.length; i++) {
+        if (array[i] % 2 === 0) {
+            arrayElevados.push(array[i] ** 2);
+        }
+    }
+    return arrayElevados;
  
 }
 
