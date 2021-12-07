@@ -70,8 +70,25 @@ function retornaMaiorNumero(array) {
 
 // EXERCÍCIO 07
 function retornaObjetoEntreDoisNumeros(num1, num2) {
+    var maiorNumero = [];
+    var menorNumero = [];
+    var maiorDivisivelPorMenor = [];
+    var diferenca = [];
+    var maiorNumero = Math.max(num1, num2);
+    var menorNumero = Math.min(num1, num2);
+    var diferenca = Math.max(num1, num2) - Math.min(num1, num2);
+    for (var i = menorNumero; i <= maiorNumero; i++) {
+        if (i % menorNumero === 0) {
+            maiorDivisivelPorMenor = true;
+        } else {
+            maiorDivisivelPorMenor = false;
+
+        }
+    }
+    return {maiorNumero, maiorDivisivelPorMenor, diferenca};
 
 }
+
 
 // EXERCÍCIO 08
 function retornaNPrimeirosPares(n) {
