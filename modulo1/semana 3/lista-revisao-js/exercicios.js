@@ -118,9 +118,22 @@ function classificaTriangulo(ladoA, ladoB, ladoC) {
 
 // EXERCÍCIO 10
 function retornaSegundoMaiorESegundoMenor(array) {
-  
-}
+    var segundoMaior = 0;
+    var segundoMenor = 0;
+    var arrayOrdenado = [];
+    for (var i = 0; i < array.length; i++) {
+        arrayOrdenado.push(array[i]);
+    }
+    arrayOrdenado.sort(function(a, b) {
+        return a - b;
+    }
 
+    
+    );
+    segundoMaior = arrayOrdenado[arrayOrdenado.length - 2];
+    segundoMenor = arrayOrdenado[1];
+    return [segundoMaior, segundoMenor];
+}
 // EXERCÍCIO 11
 function retornaChamadaDeFilme(filme) {
    
