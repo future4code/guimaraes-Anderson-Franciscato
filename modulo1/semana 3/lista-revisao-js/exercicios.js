@@ -136,7 +136,9 @@ function retornaSegundoMaiorESegundoMenor(array) {
 }
 // EXERCÍCIO 11
 function retornaChamadaDeFilme(filme) {
+    
 
+    return "Venha assistir ao filme " + filme.nome + ", de " + filme.ano + ", dirigido por " + filme.diretor + " e estrelado por " + filme.atores.join(', ') + ".";
 
 }
 
@@ -180,12 +182,20 @@ function retornaPessoasNaoAutorizadas(pessoas) {
 // EXERCÍCIO 14
 function retornaContasComSaldoAtualizado(contas) {
     
-
 }
 
 // EXERCÍCIO 15A
 function retornaArrayOrdenadoAlfabeticamente(consultas) {
-  
+  var consultasOrdenadas = [];
+    for (var i = 0; i < consultas.length; i++) {
+        consultasOrdenadas.push(consultas[i]);
+    }
+    consultasOrdenadas.sort(function(a, b) {
+        return a - b;
+    }
+    );
+    return consultasOrdenadas;
+
 }
 
 // EXERCÍCIO 15B
