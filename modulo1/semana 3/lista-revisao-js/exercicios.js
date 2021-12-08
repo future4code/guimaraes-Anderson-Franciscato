@@ -136,17 +136,33 @@ function retornaSegundoMaiorESegundoMenor(array) {
 }
 // EXERCÍCIO 11
 function retornaChamadaDeFilme(filme) {
-   
+
+
 }
 
 // EXERCÍCIO 12
 function retornaPessoaAnonimizada(pessoa) {
+    var pessoaAnonimizada = {};
+    pessoaAnonimizada.nome = "ANÔNIMO";
+    pessoaAnonimizada.idade = pessoa.idade;
+    pessoaAnonimizada.email = pessoa.email;
+    pessoaAnonimizada.endereco = pessoa.endereco;
+
+    return pessoaAnonimizada;
+
    
 }
 
 // EXERCÍCIO 13A
 function retornaPessoasAutorizadas(pessoas) {
-   
+    var pessoasAutorizadas = [];
+    for (var i = 0; i < pessoas.length; i++) {
+        if (pessoas[i].idade > 14 && pessoas[i].idade <= 60 && pessoas[i].altura >= 1.5) {
+            pessoasAutorizadas.push(pessoas[i]);
+        }
+    }
+    return pessoasAutorizadas;
+
 }
 
 // EXERCÍCIO 13B
