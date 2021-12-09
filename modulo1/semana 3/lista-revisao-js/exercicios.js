@@ -188,17 +188,23 @@ function retornaContasComSaldoAtualizado(contas) {
 function retornaArrayOrdenadoAlfabeticamente(consultas) {
   var consultasOrdenadas = [];
     for (var i = 0; i < consultas.length; i++) {
-        consultasOrdenadas.push(consultas[i]);
+        consultasOrdenadas.push(consultas[i].nome);
     }
-    consultasOrdenadas.sort(function(a, b) {
-        return a - b;
+    consultasOrdenadas.sort();
+    var consultacomp = [];
+    for (var i = 0; i < consultasOrdenadas.length; i++) {
+        for (var j = 0; j < consultas.length; j++) {
+            if (consultasOrdenadas[i] === consultas[j].nome) {
+                consultacomp.push(consultas[j]);
+            }
+        }
     }
-    );
-    return consultasOrdenadas;
+    return consultacomp;
 
 }
 
 // EXERCÍCIO 15B
 function retornaArrayOrdenadoPorData(consultas) {
+    
    
 }
