@@ -181,8 +181,22 @@ function retornaPessoasNaoAutorizadas(pessoas) {
 
 // EXERCÍCIO 14
 function retornaContasComSaldoAtualizado(contas) {
-    
+     for (const contaAtual of contas) {
+        somaCompras = contaAtual.compras.reduce((soma, i) => {
+            soma += i
+            console.log(contaAtual.compras, soma);
+            return soma
+
+        });
+        contaAtual.saldoTotal -= somaCompras
+
+
+        contaAtual.compras = []
+
+        return contas
+    }
 }
+    
 
 // EXERCÍCIO 15A
 function retornaArrayOrdenadoAlfabeticamente(consultas) {
@@ -205,6 +219,11 @@ function retornaArrayOrdenadoAlfabeticamente(consultas) {
 
 // EXERCÍCIO 15B
 function retornaArrayOrdenadoPorData(consultas) {
-    
+    var consultasData = [];
+    for (var i = 0; i < consultas.length; i++) {
+        consultasData.push(consultas[i].data);
+    }
+    consultasData.sort();
+            
    
 }
