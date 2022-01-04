@@ -117,11 +117,24 @@ td button {
     border-radius: 5px;
     color: black;
 }
-
+td button:hover {
+    background-color: #c44f00;
+}
+td button:active {
+    background-color: #c44f00;
+    text-transform: white;
+}
 .container-do-search {
     margin-top: 20px;
     height: 100px;
 }
+#search {
+    width: 500px;
+    height: 30px;
+    border: none;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+}
+
 
 
 #back-button {
