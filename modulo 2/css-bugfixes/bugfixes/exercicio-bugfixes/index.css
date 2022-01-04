@@ -71,13 +71,15 @@ div img {
 
 #container-de-descricao {
     position: relative;
+    text-align: center;
     background-color: #2274a5;
     color: white;
     padding: 10%;
 }
 
 #container-de-descricao>ol {
-    padding: 30px 0px;
+    text-align: center;
+    padding: 20px 10px;
 }
 
 #container-para-comprar {
