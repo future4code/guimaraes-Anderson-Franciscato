@@ -43,7 +43,7 @@ div img {
     width: 250px;
     height: 40px;
     position: relative;
-    top: 50%;
+    top: 20%;
     left: -20%;
     border-radius: 5px;
     font-size: 20px;
@@ -75,16 +75,23 @@ div img {
     text-align: center;
     background-color: #2274a5;
     color: white;
-    padding: 10%;
+    height: 300px;
+    width: 100%;
+    margin: bottom;
 }
-
 #container-de-descricao>ol {
     text-align: center;
-    padding: 20px 10px;
+    position: relative;
+    top: 30%;
+    margin: 0 auto;
+    list-style-type: decimal; list-style-position: inside;
 }
 
 #container-para-comprar {
     background-color: #e7eb90;
+    text-align: center;
+    width: 100%;
+    margin: center;
 }
 
 #container-para-comprar>p {
@@ -135,7 +142,9 @@ td button:active {
     border: none;
     box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
 }
-
+#buscar:hover {
+    opacity: 0.4;
+}
 
 
 #back-button {
