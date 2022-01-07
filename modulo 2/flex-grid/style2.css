@@ -1,0 +1,97 @@
+body,
+p   {
+    padding: 0;
+    margin: 0;
+    font-size: 1.5rem;      
+    font-style: italic;     
+    color: rgb(80, 78, 78);   
+}
+.principal {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+}
+.principal {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr ;
+    grid-template-rows: 1fr 4fr 0.4fr;
+    grid-template-areas: "cabecalho cabecalho" 
+                         "secao barra-lateral" 
+                         "rodape rodape";
+}
+
+header {
+   grid-area: cabecalho;
+   background-color: mediumvioletred;
+}
+
+.principal1 {
+    grid-area: secao;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    padding-left: -220px;
+    padding-right: 2px;
+    
+
+ }
+.conteudo{
+    grid-area: conteudo;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    background-color: #f2f2f2;
+    width: 1%;
+    left: 600px;
+}
+.conteudo img{
+    width: 50%;
+    height: 20%;
+}
+ footer {
+    background-color: mediumvioletred;
+    grid-area: rodape;
+    text-align: center;
+    color: black;
+ }
+ #logoimg{
+    width:2%;
+    height:auto;
+ }
+
+#login{
+    justify-content: end;
+    margin-left: 70%;
+}
+.menu {
+    background-color: #f2d0e0;
+    justify-content: flex-start;
+    align-items: start;
+    flex-direction: column;
+    display: flex;
+   /*  padding-left: -60px;
+    padding-right: -60px; */
+    
+}
+.menu img {
+    width: 1.5%;
+    height: auto;
+}
+
+.Bolos {
+    background-color: #f2f2f2;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+.item1, .item2, .item3, .item4, .item5, .item6, .item7 {
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: darkgray;
+}
