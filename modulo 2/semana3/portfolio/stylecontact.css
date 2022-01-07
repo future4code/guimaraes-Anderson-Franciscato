@@ -1,0 +1,120 @@
+body,
+p   {
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;      
+    font-style: italic;     
+    color: rgb(80, 78, 78);   
+}
+.container {
+    width: 20%;
+    margin: 0 auto;
+    display: grid;
+}
+.container {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.4fr 0.6fr;
+    grid-template-rows: 0.1fr;
+    grid-template-areas: "cabecalho cabecalho" 
+                         "secao barra-lateral" 
+                         "rodape rodape";
+    background-color: rgb(247, 247, 247);
+}
+
+.navbar {
+    grid-area: cabecalho;
+    background-color: rgb(250, 248, 248);
+    border-bottom: 1px solid rgb(80, 78, 78);
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+.footer {
+    grid-area: rodape;
+    background-color: rgb(3, 3, 3);
+    border-top: 1px solid rgb(80, 78, 78);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 10px;
+}
+#showcase {
+    grid-area: secao;
+    background-color: rgb(247, 238, 238);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container1 {
+    width: 100%;
+    margin: 0 auto;
+    display: row;
+    grid-template-rows: 15% 10%;
+    width: 100%;
+    text-align: center;
+    flex-direction: row;
+    height: 100%;
+}
+.container2 {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 50% 20%;
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    background-color: rgb(247, 238, 238);
+}
+.container1 img {
+    width: 20%
+}
+.button_1 {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(80, 78, 78);
+    padding: 0.5rem;
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+}
+.button_1:hover {
+    background-color: rgb(80, 78, 78);
+    color: rgb(255, 255, 255);
+}
+.button_1:active {
+    background-color: rgb(121, 34, 34);
+    color: rgb(78, 37, 37);
+}
+.button_1::after {
+   color: aqua;
+   background-color: aqua;
+}
+.button_1:focus {
+    background-color: rgb(80, 78, 78);
+    color: rgb(255, 255, 255);
+}
+.container2 img {
+    width: 5%
+}
+.form {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "nome nome"
+                         "email email"
+                         "mensagem mensagem"
+                         "enviar enviar";
+    background-color: rgb(247, 238, 238);
+    padding: 1rem;
+    text-align: center;
+    flex-direction: column;
+}

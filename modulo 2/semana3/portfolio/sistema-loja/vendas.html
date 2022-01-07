@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <link rel="stylesheet" type="text/css" href="./formulario.css" media="screen">
+
+        <title>Vendas</title>
+    </head>
+
+    <body>  
+
+        <div>
+            <h1 id="titulo">Cadastro de compras</h1>
+            <p id="subtitulo">Complete suas informações</p>
+            <br>
+        </div>
+
+        <form>
+
+            <fieldset class="grupo">
+                <div class="campo">
+                    <label for="nome_vendedor"><strong>Nome do vendedor</strong></label>
+                    <input type="text" name="nome_vendedor" id="nome_vendedor" required>
+                </div>
+
+                <div class="campo">
+                    <label for="nome_comprador"><strong>Nome do comprador</strong></label>
+                    <input type="text" name="nome_comprador" id="nome_comprador" required>
+                </div>
+            </fieldset> 
+
+            <div class="campo">
+                <label for="email"><strong>Email</strong></label>
+                <input type="email" name="email" id="email" required>
+            </div>
+
+            <div class="campo">
+                <label><strong>Qual o meio de pagamento?</strong></label>
+                <label>
+                    <input type="radio" name="pagamento" value="cartao" checked>Cartão
+                </label>
+                <label>
+                    <input type="radio" name="pagamento" value="pix">Pix
+                </label>
+                <label>
+                    <input type="radio" name="pagamento" value="dinheiro">Dinheiro
+                </label>
+            </div>
+
+            <div class="campo">
+                <label for="qdo_pago"><strong>Quando foi pago?</strong></label>
+                <select id="qdo_pago" required>
+                  <option selected disabled value="">Selecione</option>
+                  <option>A vista</option>
+                  <option>Na entrega</option>
+                  <option>Em 30 dias</option>
+                </select>
+            </div>
+
+            <fieldset class="grupo">
+                <!-- Campo de tecnologias para escolha de 1 ou mais opções para marcar (checkbox) e css de classe "campo" -->
+                <div id="check">
+                    <label><strong>Selecione as tecnologias que utiliza:</strong></label><br><br>
+                    <input type="checkbox" id="item1" name="item1" value="Pokedex">
+                    <label for="item1"> Pokedex </label>
+                    <input type="checkbox" id="item2" name="item2" value="Potion">
+                    <label for="item2"> Potion </label>
+                    <input type="checkbox" id="item3" name="item3" value="Pokebola">
+                    <label for="item3"> Pokebola </label>
+                    <input type="checkbox" id="item4" name="item4" value="Masterball">
+                    <label for="item4"> Master Ball </label>
+                    <input type="checkbox" id="item5" name="item5" value="Candy">
+                    <label for="item5"> Candy </label>
+                </div>
+            </fieldset>
+
+            <div class="campo">
+                <br>
+                <label for="itens_total"><strong>Detalhe a quantidade dos itens: </strong></label>
+                <textarea rows="6" style="width: 26em" id="itens_total" name="itens_total"></textarea>
+            </div>
+
+            <button class="botao" type="submit" onsubmit="">Concluído</button>            
+
+        </form>
+<div><footer>
+        <p>&copy; 2019 - Pokebuy - Todos os direitos reservados</p>
+</footer> 
+</div>
+    </body>
+
+</html>
