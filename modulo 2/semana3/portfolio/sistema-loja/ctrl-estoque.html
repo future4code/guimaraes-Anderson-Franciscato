@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+            footer {
+  text-align: center;
+  padding: 3px;
+  background-color: none;
+  color: rgb(211, 22, 22);
+  position: fixed;
+}
+.content{
+     margin: 30px;
+    }
+.botaobuy{
+     background: -webkit-linear-gradient(bottom, #417788, #d0d8da 70%);
+     background: -moz-linear-gradient(bottom, #4fc7b7, #57b8c9 70%);
+     background: -o-linear-gradient(bottom, #4eb4a3, #86b3d1 70%);
+     background: -ms-linear-gradient(bottom, #E0E0E0, #F9F9F9 70%);
+     background: linear-gradient(bottom, #E0E0E0, #F9F9F9 70%);
+     border: 1px solid #CCCCCE;
+     border-radius: 3px;
+     box-shadow: 0 3px 0 rgba(0, 0, 0, .3),
+                   0 2px 7px rgba(0, 0, 0, 0.2);
+     color: #616165;
+     display: block;
+     font-family: "Trebuchet MS";
+     font-size: 14px;
+     font-weight: bold;
+     line-height: 25px;
+     text-align: center;
+     text-decoration: none;
+     text-transform: uppercase;
+     text-shadow:1px 1px 0 #FFF;
+     padding: 5px 15px;
+     position: right top;
+     width: 80px;
+}
+ 
+.botaobuy:before{
+     border: 1px solid #FFF;
+     border-radius: 3px;
+     box-shadow: inset 0 -2px 12px -4px rgba(70, 70, 70, .2),
+                   inset 0 3px 2px -1px rgba(255, 255, 255, 1);
+     content: "";
+     bottom: 0;
+     left: 0;
+     right: 0;
+     top: 0;
+     padding: 5px;
+     position: right top;
+    }
+ 
+    .botaobuy:after{
+     background: rgba(255, 255, 255, .4);
+     border-radius: 2px;
+     content: "";
+     bottom: 15px;
+     left: 0px;
+     right: 0px;
+     top: 0px;
+     position: right top;
+    }
+ .botaobuy:active{
+     box-shadow: inset 0 0 7px rgba(0, 0, 0, .2);
+     top: 4px;
+    }
+    .botaobuy:active:before{
+     border: none;
+     box-shadow:none;
+    }
+    body { background-image: url("./img/fundo.png"); 
+           background-color: #524b4b; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    </style>
+    
+    <title>Controle de Estoque</title>
+      <header>
+  <h1>Estoque <em>Pokebuy</em>!</h1>
+  <div>
+        <a href="./index.html">Página Inicial</a>
+        <a href="./ctrl-estoque.html">Controle de Estoque</a>
+        <a href="./add-produto.html">Adicionar Produto</a>
+        <a href="./funcionarios.html">Funcionários</a>
+    </div>
+</head>
+<body link="white" vlink="white" fontcolor="#002020" style="color:#020020">
+
+    <h2>Controle de Estoque</h2>
+
+    <table>
+        <tr>
+            <th>Foto</th>
+            <th>Descrição</th>
+            <th>Preço (R$)</th>
+            <th>Quantidade disponível</th>
+        </tr>
+
+        <tr>
+            <td><img width="80px" height="70px" src="./img/pokedex.png" alt="Pokedex para pokemons" /></td>
+            <td> Pokedex </td>
+            <td> 500,00 </td>
+            <td> 200 </td>
+        </tr>
+
+        <tr>
+            <td><img width="80px" height="70px" src="./img/potion.png" alt="potion para recuperar"/></td>
+            <td> Potion </td>
+            <td> 50,00 </td>
+            <td> 900 </td>
+        </tr>
+
+        <tr>
+            <td><img width="80px" height="70px" src="./img/pokebola.png" alt="pokebola para pega-los"/></td>
+            <td> Pokebola </td>
+            <td> 80,00 </td>
+            <td> 999 </td>
+        </tr>
+
+        <tr>
+            <td><img width="80px" height="70px" src="./img/masterball.png" alt="masterball tenha mais facilidade"/></td>
+            <td> MasterBall </td>
+            <td> 150,00 </td>
+            <td> 999 </td>
+        </tr>
+
+        
+        <!-- Crie mais uma linha desta tabela abaixo \/ -->
+        <td><img width="80px" height="70px" src="./img/candy.png" alt="Candy deixe-os felizes"/></td>
+            <td> Candy </td>
+            <td> 40,00 </td>
+            <td> 999 </td>
+
+    </table>
+    <br>
+<div class="content">
+     <a href="./vendas.html" class="botaobuy"> Comprar </a>
+    </div>
+    <footer>
+        <p>&copy; 2019 - Pokebuy - Todos os direitos reservados</p>
+</footer> 
+
+</body>
+</html>
