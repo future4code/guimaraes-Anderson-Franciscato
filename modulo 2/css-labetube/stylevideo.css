@@ -58,3 +58,75 @@ form {
     margin-left: 600px;
     position: relative;
 }
+@media screen and (min-device-width: 250px) and (max-device-width: 800px) {
+    body {
+        background-color: #d2e8f0;
+        background-image: -moz-linear-gradient(top, #e6f1f5 0%, #d2e8f0 20%);
+    }
+    .videos-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    header {
+        font-size: 30px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        color: rgb(63, 22, 22);
+        height: 70px;
+        display: flex;
+        flex-direction: column;   
+        width: flex;
+        height: flex;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: -30px;
+        margin-left: -180px;
+        position: relative;
+    }
+    .search-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        margin-left: -340px;
+        position: relative;
+    }
+h1 {
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: rgb(63, 22, 22);
+    margin-top: 20px;
+}
+.videos-container {
+    margin-top: -20px;
+    margin-left: 30px;
+    position: relative;
+}
+.video1 {
+    padding-top: -200px;
+    padding-bottom: 0px;
+}
+footer {
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: rgb(17, 15, 16);
+    height: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #a1d2e4;
+}
+video {
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    margin-left: -20px;
+}
+}
