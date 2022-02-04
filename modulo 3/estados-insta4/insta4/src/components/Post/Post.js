@@ -45,7 +45,24 @@ class Post extends React.Component {
     curtido: false,
     numeroCurtidas: 0,
     comentando: false,
-    numeroComentarios: 0
+    numeroComentarios: 0,
+      postaram: [
+        {
+          fotoUsuario:'https://picsum.photos/50/50',
+          nomeUsuario: 'Paulinha',
+          fotoPost:'https://picsum.photos/200/150',
+        },
+        {
+          fotoUsuario: 'https://www.smashbros.com/wiiu-3ds/sp/images/character/link/main.png',
+          nomeUsuario: 'Link',
+          fotoPost: 'https://t.ctcdn.com.br/sKGksv6qVGHsje9r-rugGrlg4fA=/1024x0/smart/i372686.jpeg',
+        },
+        {
+          fotoUsuario: 'https://cdn.awsli.com.br/600x700/1610/1610163/produto/62282870/poster-donkey-kong-i-efc75817.jpg',
+          nomeUsuario: 'DK',
+          fotoPost: 'https://t.ctcdn.com.br/Q1f6EvQOXACtw9rGjVVk4y24ZD4=/i372690.jpeg'
+        }
+      ]
   }
 
   onClickCurtida = () => {
@@ -75,6 +92,7 @@ class Post extends React.Component {
   }
 
   render() {
+
     let iconeCurtida
 
     if(this.state.curtido) {
@@ -88,7 +106,6 @@ class Post extends React.Component {
     if(this.state.comentando) {
       componenteComentario = <SecaoComentario aoEnviar={this.aoEnviarComentario}/>
     }
-
     return <PostContainer>
       <PostHeader>
         <UserPhoto src={this.props.fotoUsuario} alt={'Imagem do usuario'}/>

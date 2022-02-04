@@ -8,8 +8,8 @@ const MainContainer = styled.div`
   flex-direction: column;
   align-items: center;
 `
-
 class App extends React.Component {
+
   render() {
     return (
       <MainContainer>
