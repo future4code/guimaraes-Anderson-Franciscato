@@ -61,9 +61,36 @@ class Post extends React.Component {
           fotoUsuario: 'https://cdn.awsli.com.br/600x700/1610/1610163/produto/62282870/poster-donkey-kong-i-efc75817.jpg',
           nomeUsuario: 'DK',
           fotoPost: 'https://t.ctcdn.com.br/Q1f6EvQOXACtw9rGjVVk4y24ZD4=/i372690.jpeg'
-        }
-      ]
+        },
+      ],
+        valorInputUsuario: '',
+        valorInputPost: '',
+        valorInputFoto: '',
   }
+  adicionaPost = () => {
+    const novoPost = {
+      fotoUsuario: this.state.valorInputFoto,
+      nomeUsuario: this.state.valorInputUsuario,
+      fotoPost: this.state.valorInputPost,
+    };
+    const novoPostArray = [...this.state.postaram, novoPost];
+    this.setState({postaram: novoPostArray});
+    this.setState({
+      valorInputUsuario: '',
+      valorInputPost: '',
+      valorInputFoto: ''
+    });
+  }
+  onChangeinputUsuario = (event) => {
+    this.setState({valorInputUsuario: event.target.value});
+  }
+  onChangeinputPost = (event) => {
+    this.setState({valorInputPost: event.target.value});
+  }
+  onChangeinputFoto = (event) => {
+    this.setState({valorInputFoto: event.target.value});
+  }
+
 
   onClickCurtida = () => {
     console.log('Curtiu!')
@@ -106,30 +133,53 @@ class Post extends React.Component {
     if(this.state.comentando) {
       componenteComentario = <SecaoComentario aoEnviar={this.aoEnviarComentario}/>
     }
-    return <PostContainer>
-      <PostHeader>
-        <UserPhoto src={this.props.fotoUsuario} alt={'Imagem do usuario'}/>
-        <p>{this.props.nomeUsuario}</p>
-      </PostHeader>
+    const parara = this.state.postaram.map(post => {
+      return (
+        <PostContainer>
+          <PostHeader>
+            <UserPhoto src={post.fotoUsuario} alt="foto do usuario"/>
+            <p>{post.nomeUsuario}</p>
+          </PostHeader>
+          <PostPhoto src={post.fotoPost} alt="foto do post"/>
+          <PostFooter>
+            <IconeComContador
+              icone={iconeCurtida}
+              onClickIcone={this.onClickCurtida}
+              valorContador={this.state.numeroCurtidas}
+            />
+            <IconeComContador
 
-      <PostPhoto src={this.props.fotoPost} alt={'Imagem do post'}/>
+              icone={iconeComentario}
+              onClickIcone={this.onClickComentario}
+              valorContador={this.state.numeroComentarios}
+            />
+          </PostFooter>
+          {componenteComentario}
+          </PostContainer>
+      );
+  });
 
-      <PostFooter>
-        <IconeComContador
-          icone={iconeCurtida}
-          onClickIcone={this.onClickCurtida}
-          valorContador={this.state.numeroCurtidas}
+return (
+    <div>
+       <input 
+        value = {this.state.valorInputUsuario}
+        onChange = {this.onChangeinputUsuario}
+        placeholder = "Digite seu nome"
         />
-
-        <IconeComContador
-          icone={iconeComentario}
-          onClickIcone={this.onClickComentario}
-          valorContador={this.state.numeroComentarios}
+        <input
+        value = {this.state.valorInputFoto}
+        onChange = {this.onChangeinputFoto}
+        placeholder = "Digite o link da sua foto"
         />
-      </PostFooter>
-      {componenteComentario}
-    </PostContainer>
-  }
+        <input
+        value = {this.state.valorInputPost}
+        onChange = {this.onChangeinputPost}
+        placeholder = "Digite o link do seu post"
+        />
+        <button onClick={this.adicionaPost}>Postar</button>
+      {parara}
+    </div>
+  )
 }
-
+}
 export default Post
