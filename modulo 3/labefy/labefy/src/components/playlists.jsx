@@ -41,6 +41,20 @@ class Playlists extends React.Component {
             alert('Erro ao carregar as playlists');
         })
     }
+    deletarPlaylist = (playlistId) => {
+        axios.delete(`https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/${playlistId}`, {
+            headers: {
+                Authorization: 'anderson-franciscato-guimaraes'
+            }
+        })
+        .then(response => {
+            alert("Playlist deletada com sucesso!");
+        })
+        .catch(error => {
+            alert('Erro ao deletar a playlist');
+        })
+    }
+
     mostrarPlaylists = () => {
         axios.get('https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists', {
             headers: {
@@ -49,8 +63,9 @@ class Playlists extends React.Component {
         })
         const playlists = this.state.playlists.map(playlist => {
             return (
-                <Playlist>
+                <Playlist key={playlist.id}>
                     <h1>{playlist.name}</h1>
+                    <button onClick={() => this.deletarPlaylist(playlist.id)}>Deletar</button>
                 </Playlist>
             )
         })
