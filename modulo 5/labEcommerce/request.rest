@@ -1,0 +1,50 @@
+GET http://localhost:3003/users
+Content-Type: application/json
+
+### 
+
+GET http://localhost:3003/products
+Content-Type: application/json
+
+###
+
+GET http://localhost:3003/users/:user_id/purchases
+Content-Type: application/json
+Query:
+{
+  "user_id": "1"
+}
+
+###
+
+POST http://localhost:3003/users
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "myemail@example.com",
+    "password": "mypassword"
+}
+
+###
+
+POST http://localhost:3003/products
+Content-Type: application/json
+
+{
+  "name": "My Product",
+  "price": "100.00",
+  "price": 200.00,
+  "image_url": "http://example.com/image.jpg"
+}
+
+###
+
+POST http://localhost:3003/purchases
+Content-Type: application/json
+
+{
+  "user_id": 1,
+  "product_id": 1,
+  "quantity": 1
+}
