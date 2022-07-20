@@ -1,0 +1,32 @@
+GET http://localhost:3003/users
+
+###
+
+POST http://localhost:3003/users
+
+{
+    "id": "1",
+  "name": "John Doe",
+  "email": "myemail@gmail.com ",
+    "password": "123456"
+}
+
+### 
+
+POST http://localhost:3003/customers
+  
+  {
+      "id": "1",
+    "name": "John Doe",
+    "email": "myemail@gmail.com ",
+      "password": "123456",
+      "creditCard": "123456"
+  }
+
+###
+
+GET http://localhost:3003/customers
+
+###
+GET http://localhost:3003/clients
+
