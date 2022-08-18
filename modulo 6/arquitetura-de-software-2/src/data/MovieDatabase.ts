@@ -14,5 +14,13 @@ import { BaseDatabase } from "./BaseDatabase";
                 })
                 .into(MovieDatabase.TABLE_NAME);
         }
+
+    getMovies = async (): Promise<void> => {
+        try {
+          return await MovieDatabase.connection("LABEFLIX_MOVIE");
+        } catch (error: any) {
+          throw new Error(error.sqlMessage);
+        }
+    }
     }
     
