@@ -1,13 +1,13 @@
 export type recipe = {
-    id: number;
+    id: string;
     title: string;
     description: string;
-    authorId: number;
+    authorId: string;
     createdAt: string;
 }
 
 export type recipeOutput = {
-    id: number;
+    id: string;
     title: string;
     description: string;
     createdAt: string
@@ -20,9 +20,9 @@ export type recipeInputDTO = {
 }
 
 export type recipeDb = {
-    id: number;
+    id: string;
     title: string;
     description: string;
-    authorId: number;
+    authorId: string;
 }
 
